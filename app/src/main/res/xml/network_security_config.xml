@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    این تنظیم اجازه می‌دهد اپ بدون HTTPS هم به سرور شما (که احتمالاً روی
+    شبکه‌ی محلی و بدون گواهی SSL اجرا می‌شود) وصل شود. اگر بعداً سرور را
+    پشت HTTPS بردید، می‌توانید cleartextTrafficPermitted را false کنید.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
