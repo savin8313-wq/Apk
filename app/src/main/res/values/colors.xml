@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_growth">#1B873F</color>
+    <color name="teal_early_growth">#0E7490</color>
+    <color name="purple_day_trading">#7C3AED</color>
+    <color name="amber_warning">#B7791F</color>
+    <color name="red_decline">#D42E2E</color>
+    <color name="neutral_gray">#6B7280</color>
+    <color name="background">#F5F6F8</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="primary">#1F2937</color>
+    <color name="accent">#2563EB</color>
+    <color name="toolbar_bg">#1F2937</color>
+</resources>
