@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">تحلیل سهام</string>
+    <string name="tab_growing">در حال رشد</string>
+    <string name="tab_early_growth">مستعد رشد</string>
+    <string name="tab_early_decline">شروع ریزش</string>
+    <string name="tab_declining">در حال ریزش</string>
+    <string name="tab_day_trading">مستعد نوسان‌گیری</string>
+    <string name="refresh_interval_hint">مثلاً 15 (دقیقه)</string>
+    <string name="dark_mode">حالت تیره</string>
+    <string name="notify_signals">اطلاع‌رسانی سیگنال‌های جدید</string>
+    <string name="notify_signals_desc">وقتی اپ باز و در حال بروزرسانیه، اگه سهم جدیدی وارد لیست «رشد»/«مستعد رشد» بشه یا یه سهم فرصت نوسان‌گیری روزانه‌ی عالی پیدا کنه، نوتیفیکیشن نشون داده می‌شه.</string>
+    <string name="search_hint">نماد را وارد کنید (مثلاً فولاد)</string>
+    <string name="search_button">بررسی</string>
+    <string name="settings_title">تنظیمات سرور</string>
+    <string name="server_ip_hint">آدرس سرور (مثلاً http://192.168.1.10:8000)</string>
+    <string name="api_key_label">کلید API (اختیاری)</string>
+    <string name="api_key_hint">فقط اگه سرور با کلید راه‌اندازی شده</string>
+    <string name="save">ذخیره</string>
+    <string name="cancel">انصراف</string>
+    <string name="last_scan_prefix">آخرین بروزرسانی: </string>
+    <string name="no_data">داده‌ای برای نمایش نیست. سرور را بررسی کنید.</string>
+    <string name="watchlist_toggle">افزودن/حذف از علاقه‌مندی‌ها</string>
+    <string name="tab_watchlist">⭐ علاقه‌مندی‌ها</string>
+    <string name="tab_portfolio">💼 پورتفولیو</string>
+    <string name="watchlist_empty">هنوز هیچ سهمی به علاقه‌مندی‌ها اضافه نکردی. توی جزئیات هر سهم، روی ⭐ بزن.</string>
+    <string name="portfolio_empty">هنوز هیچ خریدی ثبت نکردی. توی جزئیات هر سهم، روی 💼 بزن تا ثبتش کنی.</string>
+    <string name="add_to_portfolio_title">افزودن به پورتفولیو</string>
+    <string name="buy_price_hint">قیمت خرید (ریال)</string>
+    <string name="quantity_hint">تعداد (اختیاری، پیش‌فرض ۱)</string>
+    <string name="loading">در حال دریافت اطلاعات…</string>
+    <string name="error_connection">اتصال به سرور برقرار نشد. آدرس سرور را در تنظیمات بررسی کنید.</string>
+    <string name="error_not_found">نماد یافت نشد یا داده‌ی کافی وجود ندارد.</string>
+</resources>
