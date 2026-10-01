@@ -1,0 +1,51 @@
+name: Build APK
+
+# هر بار که به شاخه‌ی main پوش کنید، یا دستی از تب Actions اجرا کنید،
+# این ورک‌فلو یه فایل APK نصب‌شدنی می‌سازه، به‌عنوان Artifact آپلودش می‌کنه،
+# و یه GitHub Release جدید هم باهاش می‌سازه تا خود اپ بتونه بروزرسانی‌های
+# جدید رو پیدا و دانلود کنه.
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write   # برای ساختن Release لازمه
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: دریافت کد پروژه
+        uses: actions/checkout@v4
+
+      - name: نصب جاوا ۱۷
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: نصب و اجرای Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.5'
+
+      - name: ساخت APK نسخه‌ی Debug (قابل نصب مستقیم روی گوشی)
+        run: gradle assembleDebug --stacktrace
+
+      - name: آپلود APK به‌عنوان Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: stock-growth-app-debug
+          path: app/build/outputs/apk/debug/app-debug.apk
+
+      - name: انتشار Release برای بروزرسانی خودکار اپ
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cp app/build/outputs/apk/debug/app-debug.apk stock-growth-app.apk
+          gh release create "build-${{ github.run_number }}" \
+            stock-growth-app.apk \
+            --title "نسخه ${{ github.run_number }}" \
+            --notes "ساخت خودکار از کامیت ${{ github.sha }}"
